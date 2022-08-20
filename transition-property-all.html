@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Transition property all</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        height: 100vh;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        background-color: #242424;
+      }
+
+      .box-red,
+      .box {
+        width: 100px;
+        height: 100px;
+        border-radius: 100%;
+
+        background-color: darkorchid;
+        transition: background-color 1.5s ease;
+      }
+
+      .box-red:hover {
+        background-color: pink;
+        transition-property: background-color;
+        transition-duration: 1.5s;
+        transition-timing-function: ease;
+      }
+
+      .box {
+        background-color: #69e196;
+        transition: all 1.5s cubic-bezier(0.29, 1.01, 1, -0.68) 0.3s;
+      }
+
+      .box:hover {
+        background-color: #7446e6;
+        width: 200px;
+        height: 200px;
+        transition: all 1s cubic-bezier(0.29, 1.01, 1, -0.68) 0.5s;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box-red"></div>
+
+    <div class="box"></div>
+  </body>
+</html>
