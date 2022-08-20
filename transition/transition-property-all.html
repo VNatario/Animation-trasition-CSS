@@ -21,8 +21,9 @@
         background-color: #242424;
       }
 
-      .box-red,
-      .box {
+      .box-purple,
+      .box-green,
+      .box-yellow {
         width: 100px;
         height: 100px;
         border-radius: 100%;
@@ -31,29 +32,40 @@
         transition: background-color 1.5s ease;
       }
 
-      .box-red:hover {
+      .box-purple:hover {
         background-color: pink;
         transition-property: background-color;
         transition-duration: 1.5s;
         transition-timing-function: ease;
       }
 
-      .box {
+      .box-green {
         background-color: #69e196;
         transition: all 1s 0.3s;
       }
 
-      .box:hover {
+      .box-green:hover {
         background-color: #7446e6;
         width: 200px;
         height: 200px;
         transition: all 1s cubic-bezier(0.29, 1.01, 1, -0.68) 0.5s;
       }
+
+      .box-yellow {
+        background-color: #f2e650;
+        transition: all 1s cubic-bezier(0.29, 1.01, 1, -0.68) 0s;
+      }
+
+      .box-yellow:hover {
+        opacity: 0;
+        transition: opacity 0.7s linear 0.3s;
+      }
     </style>
   </head>
   <body>
-    <div class="box-red"></div>
+    <div class="box-purple"></div>
 
-    <div class="box"></div>
+    <div class="box-green"></div>
+    <div class="box-yellow"></div>
   </body>
 </html>
