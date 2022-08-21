@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Animation</title>
+
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+      }
+
+      body {
+        padding: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        background-color: #242424;
+      }
+
+      .ball {
+        width: 100px;
+        height: 100px;
+        border-radius: 100%;
+        background-color: #f268a8;
+        position: relative;
+
+        animation-name: example-two;
+        animation-duration: 10s;
+      }
+
+      @keyframes example-one {
+        from {
+          background-color: #f2dba8;
+        }
+
+        to {
+          background-color: #9ea0f0;
+        }
+      }
+
+      @keyframes example-two {
+        0% {
+          background-color: #f268a8;
+          left: 0;
+          top: 0;
+        }
+        20% {
+          background-color: #9ea0f0;
+          left: 500px;
+          top: 0;
+        }
+        40% {
+          background-color: #f26144;
+          left: 500px;
+          top: 200px;
+        }
+        60% {
+          background-color: #f3ba44;
+          left: -500px;
+          top: 200px;
+        }
+        80% {
+          background-color: #5cf272;
+          left: -500px;
+          top: 0;
+        }
+        100% {
+          background-color: #f268a8;
+          left: 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="ball"></div>
+  </body>
+</html>
