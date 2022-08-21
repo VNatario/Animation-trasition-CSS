@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Animation fill mode</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        height: 100vh;
+        background-color: #2c3333;
+      }
+
+      .ball {
+        width: 100px;
+        height: 100px;
+        border-radius: 100%;
+        background-color: #a5c9ca;
+        position: relative;
+
+        animation-name: ex;
+        animation-duration: 2s;
+        animation-delay: 1s;
+
+        animation-fill-mode: both;
+      }
+
+      @keyframes ex {
+        from {
+          top: 50px;
+          left: 50px;
+          background-color: #395b64;
+        }
+
+        to {
+          left: calc(100% - 150px);
+          top: calc(100% - 150px);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="ball"></div>
+  </body>
+</html>
